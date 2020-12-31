@@ -5,9 +5,9 @@ def index(request):
     return HttpResponse('Hello, world. You are at the polls index.')
 
 def detail(request, question_id):
-    return HttpResponse(f'You are looking at question {question_id}')
+    return HttpResponse(f'You are looking at question {question_id}.')
 
-def result(request, question_id):
+def results(request, question_id):
     response = f'You\'re looking at the results of question {question_id}.'
     return HttpResponse(response)
 
