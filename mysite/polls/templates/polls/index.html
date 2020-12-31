@@ -3,7 +3,7 @@
         {% for question in latest_question_list %}
             <li>
                 <!-- Find url named detail in urls.py -->
-                <a href="{% url 'detail' question.id %}">{{ question.question_text }}</a>
+                <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
             </li>
         {% endfor %}
     </ul>

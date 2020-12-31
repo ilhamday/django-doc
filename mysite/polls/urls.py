@@ -3,6 +3,8 @@ from django.urls import path
 # In the same folder, therefore using . (titik)
 from . import views
 
+app_name = 'polls'
+
 urlpatterns = [
     # example: /polls/
     path('', views.index, name='index'),
