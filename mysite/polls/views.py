@@ -7,14 +7,18 @@ from django.views import generic
 from .models import Question, Choice
 
 class IndexView(generic.ListView):
+
+    # Using template_name attribute to tell used template
+    # Don't change the attribute name
     template_name = 'polls/index.html'
-    context_object_name = 'latest_quesion_list'
+    context_object_name = 'latest_question_list'
 
     def get_queryset(self):
         # Return the last five published questions
         return Question.objects.order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
+    # Using model attribute so that each generic know what model it will be acting upon
     model = Question
     template_name = 'polls/detail.html'
 
